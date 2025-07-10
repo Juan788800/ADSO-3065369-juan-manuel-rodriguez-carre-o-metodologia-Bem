@@ -3,9 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tarjeta producto</title>
+    <link rel="stylesheet" href="tarjeta producto.css">
 </head>
 <body>
+    <!--Componente de menú de navegación.-->
+    <nav class="nav-menu">
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item nav-menu__item--ative">
+                <a class="nav-menu__link" href="#">inicio</a>
+            </li>
+            <li class="nav-menu__item">
+                <a class="nav-menu__link" href="#">servicios</a>
+            </li>
+            <li class="nav-menu__item">
+                <a class="nav-menu__link" href="#contacto">contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Componente de tarjeta de producto.-->
+    <div class="card">
+        <h2 class="card__title">Guayo TPU Pro </h2>
+        <img class="card__image" src="producto.webp" alt="producto">
+        <h2 class="card__title">150.000 pesos</h2>
+        <button class="card__button">comprar</button>
+    </div>
     
+<!--Componente de formulario de contacto.-->
+<form class="contact-form" id="contacto">
+  <div class="contact-form__group">
+    <label for="name" class="contact-form__label">Nombre</label>
+    <input type="text" id="name" class="contact-form__input" placeholder="Tu nombre" required>
+  </div>
+  <div class="contact-form__group">
+    <label for="email" class="contact-form__label">Correo</label>
+    <input type="email" id="email" class="contact-form__input" placeholder="Tu correo" required>
+  </div>
+  <div class="contact-form__group">
+    <label for="message" class="contact-form__label">Mensaje</label>
+    <textarea id="message" class="contact-form__textarea" placeholder="Escribe tu mensaje" required></textarea>
+  </div>
+  <button type="submit" class="contact-form__button">Enviar mensaje</button>
+</form>
+<!--Componente de lista de tareas.-->
+<ul class="lista-tareas">
+  <li class="lista-tareas__item lista-tareas__item--completada">
+    <span class="lista-tareas__texto">Tarea completada</span>
+    <button class="lista-tareas__enviado">Si</button>
+    <button class="lista-tareas__no-enviado">No</button>
+  </li>
+  <li class="lista-tareas__item">
+    <span class="lista-tareas__texto">Tarea pendiente</span>
+    <button class="lista-tareas__enviado">Si</button>
+    <button class="lista-tareas__no-enviado">No</button>
+  </li>
+  <li class="lista-tareas__item">
+    <span class="lista-tareas__texto">Otra tarea</span>
+    <button class="lista-tareas__enviado">Si</button>
+    <button class="lista-tareas__no-enviado">No</button>
+  </li>
+</ul>
+
+<!--Componente de galería de imágenes.-->
+<div class="galeria">
+  <div class="galeria__item">
+    <img class="galeria__imagen" src="https://picsum.photos/id/1015/300/200" alt="Imagen 1">
+  </div>
+  <div class="galeria__item">
+    <img class="galeria__imagen" src="https://picsum.photos/id/1016/300/200" alt="Imagen 2">
+  </div>
+  <div class="galeria__item">
+    <img class="galeria__imagen" src="https://picsum.photos/id/1018/300/200" alt="Imagen 3">
+  </div>
+  <div class="galeria__item">
+    <img class="galeria__imagen" src="https://picsum.photos/id/1020/300/200" alt="Imagen 4">
+  </div>
+</div>
+<!--Componente de alerta o notificación.-->
+<div class="alerta alerta__exito alerta--centrada">
+    <span class="aletar__icono">✅</span>
+    <span class="alerta__mensaje">operacion realizada con exito</span>
+</div>
+<div class="alerta alerta__error">
+    <span class="alerta__icono">❌</span>
+    <span class="alerta__mensaje">lo siento ha ocurrido un error</span>
+</div>
+<div class="alerta alerta_informacion">
+    <span class="alerta__icono">ℹ️</span>
+    <span class="alerta__mensaje">mensaje informativo</span>
+</div>
+<div class="alerta alerta_advertencia">
+    <span class="alerta_icono">⚠️</span>
+    <span class="alerta__mensaje">A ocurrido una advertencia</span>
+</div>
+<!--Componente de tabla de datos.-->
+<table class="tabla">
+  <thead class="tabla__cabecera">
+    <tr class="tabla__fila">
+      <th class="tabla__encabezado">Encabezado 1</th>
+      <th class="tabla__encabezado">Encabezado 2</th>
+      <th class="tabla__encabezado">Encabezado 3</th>
+    </tr>
+  </thead>
+  <tbody class="tabla__cuerpo">
+    <tr class="tabla__fila">
+      <td class="tabla__celda">Dato 1</td>
+      <td class="tabla_celda">Dato 2</td>
+      <td class="tabla_celda">Dato 3</td>
+    </tr>
+    <tr class="tabla__fila">
+      <td class="tabla__celda">Dato 4</td>
+      <td class="tabla_celda">Dato 5</td>
+      <td class="tabla_celda">Dato 6</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!--Componente de pie de página.-->
+
+<footer class="footer">
+    <p class="footer__contenido">
+        <span class="footer__texto">mi sitio web</span>
+        <nav class="footer__nav">
+            <a class="footer_enlace" href="#">politica de privacidad</a>
+            <a class="fotter__enlace" href="#">terminos de uso </a>
+            <a class="fotter__enlace" href="#">Hola </a>
+        </nav>
+    </p>
+</footer>
 </body>
 </html>

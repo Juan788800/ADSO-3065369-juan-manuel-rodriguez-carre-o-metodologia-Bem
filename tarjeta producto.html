@@ -128,9 +128,158 @@
         <nav class="footer__nav">
             <a class="footer_enlace" href="#">politica de privacidad</a>
             <a class="fotter__enlace" href="#">terminos de uso </a>
-            <a class="fotter__enlace" href="#">Hola </a>
-        </nav>
     </p>
 </footer>
+
+<div class="tabs">
+  <input type="radio" name="tabs" id="tab1" class="tabs__radio" checked>
+  <label for="tab1" class="tabs__label">Pestaña 1</label>
+  <input type="radio" name="tabs" id="tab2" class="tabs__radio">
+  <label for="tab2" class="tabs__label">Pestaña 2</label>
+  <input type="radio" name="tabs" id="tab3" class="tabs__radio">
+  <label for="tab3" class="tabs__label">Pestaña 3</label>
+
+  <div class="tabs__content tabs__content--1">
+    Contenido de la pestaña 1.
+  </div>
+  <div class="tabs__content tabs__content--2">
+    Contenido de la pestaña 2.
+  </div>
+  <div class="tabs__content tabs__content--3">
+    Contenido de la pestaña 3.
+  </div>
+</div>
+
+
+<div class="category-selector">
+  <label for="category" class="category-selector__label">Selecciona una categoría:</label>
+  <select id="category" class="category-selector__select">
+    <option class="category-selector__option" value="">Elige una opción</option>
+    <option class="category-selector__option" value="tecnologia">Tecnología</option>
+    <option class="category-selector__option" value="arte">Arte</option>
+    <option class="category-selector__option" value="deportes">Deportes</option>
+    <option class="category-selector__option" value="ciencia">Ciencia</option>
+  </select>
+</div>
+
+<div class="calificacion">
+  <input type="radio" id="calificacion-5" name="calificacion" class="calificacion__input" value="5">
+  <label for="calificacion-5" class="calificacion__estrella"></label>
+  <input type="radio" id="calificacion-4" name="calificacion" class="calificacion__input" value="4">
+  <label for="calificacion-4" class="calificacion__estrella"></label>
+  <input type="radio" id="calificacion-3" name="calificacion" class="calificacion__input" value="3">
+  <label for="calificacion-3" class="calificacion__estrella"></label>
+  <input type="radio" id="calificacion-2" name="calificacion" class="calificacion__input" value="2">
+  <label for="calificacion-2" class="calificacion__estrella"></label>
+  <input type="radio" id="calificacion-1" name="calificacion" class="calificacion__input" value="1">
+  <label for="calificacion-1" class="calificacion__estrella"></label>
+</div>
+
+
+<!-- Bloque principal del reproductor de video -->
+<div class="video-player">
+  <!-- Elemento: video de YouTube -->
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/xwzspCauMfA?si=IvXj96Q30InMHiwP" 
+   title="YouTube video player" 
+   frameborder="0" 
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+   referrerpolicy="strict-origin-when-cross-origin" 
+   allowfullscreen>
+  </iframe>
+</div>
+
+
+<!-- Bloque principal: barra lateral -->
+<aside class="sidebar">
+  <!-- Elemento: título de la barra lateral -->
+  <h2 class="sidebar__titulo">Menú principal</h2>
+  
+  <!-- Elemento: navegación de la barra lateral -->
+  <nav class="sidebar__nav">
+    <!-- Elemento: lista de enlaces -->
+    <ul class="sidebar__lista">
+      <!-- Elemento: ítem de la lista -->
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__enlace">Inicio</a>
+      </li>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__enlace">Perfil</a>
+      </li>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__enlace">Configuración</a>
+      </li>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__enlace">Cerrar sesión</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+
+<!-- Bloque principal: resumen del carrito -->
+<section class="carrito-resumen">
+  <!-- Elemento: título del resumen -->
+  <h2 class="carrito-resumen__titulo">Resumen del carrito</h2>
+  
+  <!-- Elemento: lista de productos en el carrito -->
+  <div class="carrito-resumen__productos">
+    <!-- Elemento: producto individual -->
+    <div class="carrito-resumen__producto">
+      <img src="abrigo-mujer-gris-1.webp" alt="Producto 1" class="carrito-resumen__imagen">
+      <div class="carrito-resumen__detalles">
+        <p class="carrito-resumen__nombre">Abrigo 01</p>
+        <p class="carrito-resumen__cantidad">Cantidad: 1</p>
+        <p class="carrito-resumen__precio">€45.00</p>
+      </div>
+    </div>
+    <div class="carrito-resumen__producto">
+      <img src="R.jpg" alt="Producto 2" class="carrito-resumen__imagen">
+      <div class="carrito-resumen__detalles">
+        <p class="carrito-resumen__nombre">Abrigo 02</p>
+        <p class="carrito-resumen__cantidad">Cantidad: 2</p>
+        <p class="carrito-resumen__precio">€90.00</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Elemento: total y acciones -->
+  <div class="carrito-resumen__acciones">
+    <div class="carrito-resumen__total">
+      <span>Total:</span>
+      <span class="carrito-resumen__total-precio">€135.00</span>
+    </div>
+    <button class="carrito-resumen__boton carrito-resumen__boton--vaciar">Vaciar carrito</button>
+    <button class="carrito-resumen__boton carrito-resumen__boton--comprar">Comprar ahora</button>
+  </div>
+</section>
+
+<!-- Bloque principal: publicación de blog -->
+<article class="blog-post">
+  <!-- Elemento: imagen destacada -->
+  <img src="OIP.webp" alt="Imagen de la publicación" class="blog-post__imagen">
+
+  <!-- Elemento: cabecera con título y metadatos -->
+  <header class="blog-post__cabecera">
+    <h2 class="blog-post__titulo">mi primera publicacion en facebook</h2>
+    <div class="blog-post__meta">
+      <span class="blog-post__autor">Por Juan Manuel</span>
+      <span class="blog-post__fecha">12 de julio de 2025</span>
+    </div>
+  </header>
+
+  <!-- Elemento: contenido principal -->
+  <div class="blog-post__contenido">
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident facere nemo, est, maxime veritatis praesentium quis maiores illo reiciendis eum eveniet placeat et! Eos impedit, suscipit perferendis sunt dolorem distinctio?
+    </p>
+  </div>
+
+  <!-- Elemento: pie de publicación con acciones -->
+  <footer class="blog-post__pie">
+    <a href="#" class="blog-post__leer-mas">Leer más</a>
+  </footer>
+</article>
+
+
 </body>
 </html>

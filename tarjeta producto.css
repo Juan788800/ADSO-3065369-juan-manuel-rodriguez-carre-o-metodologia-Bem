@@ -356,3 +356,333 @@ th {
   color: #000000;
   text-decoration: underline;
 }
+
+
+.tabs__content {
+  display: none;
+}
+#tab1:checked ~ .tabs__content--1,
+#tab2:checked ~ .tabs__content--2,
+#tab3:checked ~ .tabs__content--3 {
+  display:inline-block;
+}
+.tabs__radio {
+  display: none;
+}
+
+
+.tabs__label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #eee;
+  color: #333;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+}
+#tab1:checked + .tabs__label,
+#tab2:checked + .tabs__label,
+#tab3:checked + .tabs__label {
+  background: #007bff;
+  color: #fff;
+}
+
+.tabs {
+  width: 500px;      
+  margin: 50px auto;
+  font-family: sans-serif;
+}
+
+
+.category-selector {
+  width: 300px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+}
+
+.category-selector__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-selector__select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fafafa;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.category-selector__select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.category-selector__option {
+  color: #333;
+}
+
+
+
+.calificacion {
+  direction: rtl;           
+  unicode-bidi: bidi-override;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.calificacion__input {
+  display: none;
+}
+
+.calificacion__estrella {
+  display: inline-block;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.calificacion__estrella::before {
+  content: "★";
+}
+
+.calificacion__input:checked ~ .calificacion__estrella,
+.calificacion__input:checked ~ .calificacion__estrella ~ .calificacion__estrella {
+  color: #ffd700;           
+}
+
+.calificacion__estrella:hover,
+.calificacion__estrella:hover ~ .calificacion__estrella {
+  color: #ffdb70;          
+}
+
+
+/* Bloque principal del reproductor */
+.video-player {
+  width: 600px;                /* Ancho fijo del reproductor */
+  margin: 30px auto;           /* Centra el reproductor horizontalmente */
+  background: #235b94;         /* Color de fondo suave */
+  border-radius: 8px;          /* Bordes redondeados */
+  box-shadow: 0 2px 8px #0002; /* Sombra ligera */
+  padding: 20px;               /* Espaciado interno */
+  text-align: center;          /* Centra el contenido hijo (el video) */
+  font-family: Arial, sans-serif; /* Fuente base */
+}
+
+/* Elemento: iframe del video */
+.video-player__video {
+  width: 100%;                 /* Ocupa todo el ancho del contenedor */
+  max-width: 480px;            /* Máximo ancho permitido */
+  height: 270px;               /* Altura fija  */
+  border-radius: 6px;          /* Bordes redondeados */
+  background: #000;            /* Fondo negro para el video */
+  border: none;                /* Sin borde por defecto */
+  display: inline-block;       /* Permite centrar el iframe 
+  box-shadow: 0 1px 4px #0003; /* Sombra sutil para resaltar el video */
+}
+
+
+
+/* Bloque principal: barra lateral */
+.sidebar {
+  width: 240px;                /* Ancho fijo de la barra lateral */
+  min-height: 100vh;           /* Altura mínima: toda la pantalla */
+  background: #222b3a;         /* Color de fondo oscuro */
+  color: #fff;                 /* Color del texto */
+  padding: 24px 16px;          /* Espaciado interno */
+  box-shadow: 2px 0 8px #0003; /* Sombra ligera a la derecha */
+  position: fixed;             /* Barra lateral fija */
+  top: 0;                      /* Desde la parte superior */
+  left: 0;                     /* Pegada al lado izquierdo */
+}
+
+/* Elemento: título */
+.sidebar__titulo {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Elemento: navegación */
+.sidebar__nav {
+  margin-bottom: 16px;
+}
+
+/* Elemento: lista de enlaces */
+.sidebar__lista {
+  list-style: none;           
+  padding: 0;
+  margin: 0;
+}
+
+/* Elemento: ítem de la lista */
+.sidebar__item {
+  margin-bottom: 12px;
+}
+
+/* Elemento: enlace de navegación */
+.sidebar__enlace {
+  display: block;
+  padding: 10px 14px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+/* Efecto al pasar el mouse o enfocar el enlace */
+.sidebar__enlace:hover,
+.sidebar__enlace:focus {
+  background: #34405a;
+  color: #ffd700;
+}
+
+
+/* Bloque principal: resumen del carrito */
+.carrito-resumen {
+  max-width: 350px;         /* Ancho máximo del resumen */
+  margin: 30px auto;        /* Centrado horizontal en la página */
+  padding: 16px;            /* Espaciado interno */
+  background: #f7f7f7;      /* Fondo claro */
+  border-radius: 8px;       /* Bordes redondeados */
+  font-family: Arial, sans-serif; /* Fuente base */
+}
+
+/* Elemento: título del resumen */
+.carrito-resumen__titulo {
+  text-align: center;       /* Centra el texto */
+  font-size: 1.1rem;        /* Tamaño de fuente */
+  margin-bottom: 16px;      /* Espacio debajo del título */
+}
+
+/* Elemento: producto individual */
+.carrito-resumen__producto {
+  background: #fff;         /* Fondo blanco para cada producto */
+  border-radius: 6px;       /* Bordes redondeados */
+  padding: 8px;             /* Espaciado interno */
+  margin-bottom: 12px;      /* Espacio entre productos */
+  overflow: hidden;         /* Evita que la imagen se desborde */
+}
+
+/* Elemento: imagen del producto */
+.carrito-resumen__imagen {
+  width: 50px;              /* Ancho fijo de la imagen */
+  height: 50px;             /* Alto fijo de la imagen */
+  float: left;              /* Coloca la imagen a la izquierda */
+  margin-right: 10px;       /* Espacio a la derecha de la imagen */
+  border-radius: 4px;       /* Bordes redondeados */
+}
+
+/* Elemento: detalles del producto */
+.carrito-resumen__detalles {
+  margin-left: 65px;        /* Deja espacio a la izquierda para la imagen */
+}
+
+/* Elemento: nombre del producto */
+.carrito-resumen__nombre {
+  font-weight: bold;        /* Texto en negrita */
+  margin: 0 0 4px 0;        /* Sin margen arriba, pequeño margen abajo */
+}
+
+/* Elemento: cantidad y precio del producto */
+.carrito-resumen__cantidad,
+.carrito-resumen__precio {
+  margin: 0;                /* Sin margen */
+  font-size: 0.95rem;       /* Tamaño de fuente menor */
+  color: #444;              /* Color de texto gris oscuro */
+}
+
+/* Elemento: total del carrito */
+.carrito-resumen__total {
+  text-align: right;        /* Alinea el texto a la derecha */
+  font-weight: bold;        /* Texto en negrita */
+  margin: 14px 0;           /* Espacio arriba y abajo */
+}
+
+/* Elemento: botón de acción */
+.carrito-resumen__boton {
+  display: inline-block;    /* Permite que los botones se alineen uno al lado del otro */
+  padding: 8px 14px;        /* Espaciado interno del botón */
+  border: none;             /* Sin borde */
+  border-radius: 4px;       /* Bordes redondeados */
+  background: #219150;      /* Fondo verde */
+  color: #fff;              /* Texto blanco */
+  margin: 4px 2px;          /* Espacio entre botones */
+  cursor: pointer;          /* Cursor de mano al pasar el mouse */
+}
+
+/* Modificador: botón para vaciar el carrito */
+.carrito-resumen__boton--vaciar {
+  background: #e74c3c;      /* Fondo rojo */
+}
+
+
+/* Bloque principal: publicación de blog */
+.blog-post {
+  max-width: 400px;            /* Ancho máximo del componente */
+  margin: 24px auto;           /* Centrado horizontal */
+  background: #fff;            /* Fondo blanco */
+  border-radius: 8px;          /* Bordes redondeados */
+  box-shadow: 0 2px 8px #0002; /* Sombra ligera */
+  padding: 20px;               /* Espaciado interno */
+  font-family: Arial, sans-serif; /* Fuente base */
+}
+
+/* Elemento: imagen destacada */
+.blog-post__imagen {
+  width: 100%;                 /* Imagen ocupa todo el ancho */
+  border-radius: 6px;          /* Bordes redondeados */
+  margin-bottom: 14px;         /* Espacio debajo de la imagen */
+}
+
+/* Elemento: cabecera */
+.blog-post__cabecera {
+  margin-bottom: 12px;         /* Espacio debajo de la cabecera */
+}
+
+/* Elemento: título */
+.blog-post__titulo {
+  font-size: 1.3rem;           /* Tamaño de fuente */
+  margin: 0 0 6px 0;           /* Espacio debajo del título */
+}
+
+/* Elemento: metadatos */
+.blog-post__meta {
+  font-size: 0.95rem;          /* Tamaño menor para metadatos */
+  color: #888;                 /* Color gris */
+}
+
+/* Elementos: autor y fecha */
+.blog-post__autor {
+  margin-right: 10px;          /* Espacio a la derecha del autor */
+}
+
+/* Elemento: contenido principal */
+.blog-post__contenido {
+  margin-bottom: 16px;         /* Espacio debajo del contenido */
+  color: #333;                 /* Color de texto principal */
+}
+
+/* Elemento: pie de publicación */
+.blog-post__pie {
+  text-align: right;           /* Alinea el enlace a la derecha */
+}
+
+/* Elemento: enlace "Leer más" */
+.blog-post__leer-mas {
+  color: #2196f3;              /* Color azul para el enlace */
+  text-decoration: none;       /* Sin subrayado */
+  font-weight: bold;           /* Texto en negrita */
+  transition: color 0.2s;      /* Transición suave de color */
+}
+
+.blog-post__leer-mas:hover {
+  color: #1769aa;              /* Cambia el color al pasar el mouse */
+}
